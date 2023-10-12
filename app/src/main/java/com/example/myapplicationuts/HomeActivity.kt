@@ -34,7 +34,7 @@ class HomeActivity : AppCompatActivity() {
 
 
     private lateinit var binding: ActivityHomeBinding
-    var cardtodisplay = 1
+    private var cardtodisplay = 1
     private var kalorisekarang = 0.0
     private var kaloritarget = 0.0
     private var totalkaloritarget = 0.0
@@ -60,7 +60,7 @@ class HomeActivity : AppCompatActivity() {
                     textView.text = kalorisekarang.toString()
                 }
 
-                hitungprogress(kalorisekarang, "IN")
+                hitungprogress(kalorisekarang)
                 if (calorieamount != null) {
                     hitungremainingcal(calorieamount.toDouble()!!, "IN")
                 }
@@ -89,7 +89,7 @@ class HomeActivity : AppCompatActivity() {
                     kalorisekarang -= calorieamount?.toDouble()!!
                     textView.text = kalorisekarang.toString()
                 }
-                hitungprogress(kalorisekarang, "OUT")
+                hitungprogress(kalorisekarang)
                 if (calorieamount != null) {
                     hitungremainingcal(calorieamount.toDouble()!!, "OUT")
                 }
@@ -123,17 +123,15 @@ class HomeActivity : AppCompatActivity() {
             val name = intent.getStringExtra(EXTRA_USERNAME)
             val satuanbb = intent.getStringExtra(EXTRA_WEIGHTUNIT)
             val targetdate = intent.getStringExtra(EXTRA_TARGETDATE)
+            val dietgoal = intent.getStringExtra(EXTRA_DIETGOAL)
+            var maxcall = intent.getStringExtra(EXTRA_DAILYCALMAX).toString()
 
             txtUsername.text = "Hello $name"
             txtCweight.text = "Your Current Weight Is $cweight $satuanbb"
             txtTweight.text = "Your Target Weight Is $tweight $satuanbb "
             txtDatetarget.text = "Your Target Date Is $targetdate"
-
-
-            val dietgoal = intent.getStringExtra(EXTRA_DIETGOAL)
             txtDietgoal.text = "Your Diet Target is $dietgoal"
 
-            var maxcall = intent.getStringExtra(EXTRA_DAILYCALMAX).toString()
             textView2.text = "of $maxcall"
             txtRemainingCall.text = "$maxcall"
             totalkaloritarget = maxcall.toDouble()
@@ -149,7 +147,6 @@ class HomeActivity : AppCompatActivity() {
                 val intentToOutActivity =
                     Intent(this@HomeActivity, InputdataActivityOut::class.java)
                 launcher2.launch(intentToOutActivity)
-
             }
         }
     }
@@ -171,7 +168,7 @@ class HomeActivity : AppCompatActivity() {
 
     }
 
-    private fun hitungprogress(argA: Double, inout: String){
+    private fun hitungprogress(argA: Double){
         var progresnilai: Double = (argA/totalkaloritarget * 100)
 
         var circularProgressIndicator = findViewById<CircularProgressIndicator>(R.id.progress_circular_indicator)

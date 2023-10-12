@@ -13,6 +13,7 @@ import com.example.myapplicationuts.databinding.ActivityGetstartedBinding
 
 
 class GetstartedActivity : AppCompatActivity(){
+
     private lateinit var binding: ActivityGetstartedBinding
     private lateinit var dietgoalarray : Array<String>
     private var dietdipilih = ""
@@ -71,7 +72,6 @@ class GetstartedActivity : AppCompatActivity(){
                     startActivity(intentToHomeActivity)
                     finish()
                 } else {
-
                     Toast.makeText(this@GetstartedActivity, "Harap isi semua data dengan benar", Toast.LENGTH_SHORT).show()
                 }
             }
@@ -106,13 +106,6 @@ class GetstartedActivity : AppCompatActivity(){
                     }
                     override fun onNothingSelected(p0: AdapterView<*>?) {}
                 }
-
-
-
         }
     }
-
-
-
-
 }
