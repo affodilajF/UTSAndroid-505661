@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InputdataActivityOut"
+    android:padding="20dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+
+                android:id="@+id/txt_inputcal"
+                android:layout_margin="70dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calories OUT !"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:textColor="@color/biruungu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:background="@drawable/edittextstyle1"
+                android:paddingHorizontal="20dp"
+                android:layout_marginTop="30dp"
+                android:id="@+id/edit_text_workout_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="Workout Name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_inputcal" />
+
+
+
+
+            <EditText
+                android:layout_marginTop="20dp"
+                android:id="@+id/edit_text_cal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/edittextstyle1"
+                android:hint="Calorie Amount"
+                android:paddingHorizontal="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_text_workout_name" />
+
+
+            <TextView
+                android:id="@+id/txt_startdate"
+                android:layout_marginTop="20dp"
+                android:text="Start Time : "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edit_text_cal" />
+
+            <TimePicker
+                android:id="@+id/time_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner"
+                app:layout_constraintTop_toBottomOf="@+id/txt_startdate"
+                />
+
+            <TextView
+                android:id="@+id/txt_enddate"
+                android:layout_marginTop="20dp"
+                android:text="End Time : "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/time_picker" />
+
+            <TimePicker
+                android:id="@+id/time_picker2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner"
+                app:layout_constraintTop_toBottomOf="@+id/txt_enddate" />
+
+
+            <Button
+                android:id="@+id/btn_back_out"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/buttonstyle4"
+                android:text="BACK"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/time_picker2" />
+
+            <Button
+                android:layout_marginTop="20dp"
+                android:id="@+id/btn_done_out"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonstyle2"
+                android:text="Done"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/btn_back_out" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/txt_inputcal"-->
+<!--        android:layout_margin="70dp"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Calories OUT !"-->
+<!--        android:textSize="24dp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textColor="@color/black"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <EditText-->
+<!--        android:background="@drawable/edittextstyle1"-->
+<!--        android:paddingHorizontal="20dp"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:id="@+id/edit_text_workout_name"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:hint="Workout Name"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/txt_inputcal" />-->
+
+
+
+
+<!--    <EditText-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:id="@+id/edit_text_cal"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:background="@drawable/edittextstyle1"-->
+<!--        android:hint="Calorie Amount"-->
+<!--        android:paddingHorizontal="20dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/edit_text_workout_name" />-->
+
+
+<!--    <EditText-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:id="@+id/edit_workout_duration"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:background="@drawable/edittextstyle1"-->
+<!--        android:hint="Workout Duration"-->
+<!--        android:paddingHorizontal="20dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/edit_text_cal" />-->
+
+<!--    <TimePicker-->
+<!--        android:id="@+id/time_picker"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:timePickerMode="spinner"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/edit_workout_duration"-->
+<!--        tools:layout_editor_absoluteX="20dp" />-->
+<!--    -->
+
+<!--    <Button-->
+<!--        android:textColor="@color/white"-->
+<!--        android:background="@drawable/buttonstyle4"-->
+<!--        android:id="@+id/btn_back_out"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="BACK"-->
+<!--        android:layout_marginBottom="110dp"/>-->
+
+<!--    <Button-->
+<!--        android:textColor="@color/white"-->
+<!--        android:background="@drawable/buttonstyle2"-->
+<!--        android:id="@+id/btn_done_out"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Done"-->
+<!--        android:layout_marginBottom="50dp"/>-->
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

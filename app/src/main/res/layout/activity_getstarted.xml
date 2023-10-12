@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GetstartedActivity"
+    android:padding="30dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/txt_dataawal"
+                android:layout_margin="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Complete Your Data!"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:textColor="@color/biruungu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+
+                android:background="@drawable/edittextstyle1"
+                android:paddingHorizontal="20dp"
+                android:layout_marginTop="30dp"
+                android:id="@+id/edit_text_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="Your Name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_dataawal" />
+
+            <LinearLayout
+                android:id="@+id/layout_weight_unit"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="20dp"
+                app:layout_constraintTop_toBottomOf="@id/layout_edit_txt_weight">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Weight Unit : "
+                    android:layout_weight="1"/>
+
+                <Spinner
+                    android:id="@+id/spinner_weight_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_edit_txt_weight"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/edit_text_name">
+
+                <EditText
+                    android:id="@+id/txt_edit_currentw"
+                    android:background="@drawable/edittextstyle1"
+                    android:paddingHorizontal="20dp"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:hint="Current Weight"
+                    android:layout_weight="1"
+                    android:textSize="17dp"/>
+                <EditText
+                    android:textSize="17dp"
+                    android:id="@+id/txt_edit_targetw"
+                    android:layout_marginLeft="16dp"
+                    android:background="@drawable/edittextstyle1"
+                    android:paddingHorizontal="20dp"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:hint="Target Weight"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_diet_goal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/layout_weight_unit"
+                android:paddingLeft="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Diet Goal : "
+                    android:layout_weight="1"/>
+
+                <Spinner
+                    android:id="@+id/spinner_tujuandiet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+            <EditText
+                app:layout_constraintTop_toBottomOf="@+id/layout_diet_goal"
+                android:background="@drawable/edittextstyle1"
+                android:paddingHorizontal="20dp"
+                android:layout_marginTop="30dp"
+                android:id="@+id/edit_text_maxcalori"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="Daily maximum calorie target "
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <DatePicker
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:id="@+id/datePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_text_maxcalori" />
+
+            <Button
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:id="@+id/btn_get_started"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonstyle1"
+                android:text="Get Started"
+                app:layout_constraintTop_toBottomOf="@+id/datePicker" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WellcomeActivity"
+    android:padding="35dp">
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/txt_wellcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wellcome To FitCAL"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textStyle="bold"
+        android:textSize="45dp"
+        android:textColor="@color/ungu3"
+        />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/txt_appdesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Achieve your fitness and weight management goals with FitCall, the app that empowers you to monitor your caloric intake and exercise progress with ease!!!"
+        app:layout_constraintTop_toBottomOf="@id/txt_wellcome"
+        android:textColor="@color/ungu3"
+        />
+
+    <ImageView
+        android:id="@+id/myImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/illus"
+        app:layout_constraintBottom_toTopOf="@+id/button_get_started"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_appdesc" />
+
+    <Button
+        android:textColor="@color/white"
+        android:background="@drawable/buttonstyle1"
+        android:id="@+id/button_get_started"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ready?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">My Application UTS</string>
+
+    <array name="dietgoal">
+        <item>Cutting</item>
+        <item>Bulking</item>
+        <item>Maintaining</item>
+    </array>
+
+    <array name="tipecaloriin">
+        <item>Breakfeast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+    </array>
+
+    <array name="beratbadan">
+        <item>kg</item>
+        <item>Mg</item>
+        <item>g</item>
+    </array>
+
+</resources>
